@@ -11,4 +11,7 @@ JSP와 Servlet의 차이를 물어보는 분이 종종 있었다. 자세히 들�
 JSP는 html안에 Java코드를 넣어놓은 방식이다.< 
 
 
-### 서블릿 생명 주기
+### 서블릿 생명 주기<br>
+
+Servlet은 생명주기를 가지고 있다. WAS에서 Context가 초기화되면서 생명주기가 시작된다.<br>
+생명주기는 3단계로 Initialize, Service, Destory로 구성이된다.
