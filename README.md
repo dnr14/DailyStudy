@@ -28,7 +28,7 @@ public class InitServlet extends HttpServlet{
     @Override
     public void init(ServletConfig servletConfig) throws ServletException{
         System.out.println("init call");
-     
+        this.myParam = servletConfig.getInitParameter("siteName");
     }
 }
 ```
