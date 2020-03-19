@@ -17,7 +17,7 @@ Servlet은 생명주기를 가지고 있다. WAS에서 Context가 초기화되�
 생명주기는 3단계로 <Strong>Initialize, Service, Destory</Strong>로 구성이된다.
 
 #1. init
-```
+```java
 @WebServlet("/init")
 public class InitServlet extends HttpServlet{
 
