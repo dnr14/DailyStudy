@@ -14,4 +14,16 @@ JSP는 html안에 Java코드를 넣어놓은 방식이다.<
 ### 서블릿 생명 주기<br>
 
 Servlet은 생명주기를 가지고 있다. WAS에서 Context가 초기화되면서 생명주기가 시작된다.<br>
-생명주기는 3단계로 Initialize, Service, Destory로 구성이된다.
+생명주기는 3단계로 <Strong>Initialize, Service, Destory</Strong>로 구성이된다.
+
+#1. init
+```
+@WebServlet("/init")
+public class InitServlet extends HttpServlet{
+
+    @Override
+    public void init(ServletConfig servletConfig) throws ServletException{
+        System.out.println("init call");
+     
+    }
+```
