@@ -18,7 +18,11 @@ Servlet은 생명주기를 가지고 있다. WAS에서 Context가 초기화되�
 
 #1. init
 ```java
-@WebServlet("/init")
+@WebServlet(
+	name="initServlet", 
+	urlPatterns={"/init"}, 
+	initParams = {@WebInitParam(name = "siteName", value = "jpub")}
+	)
 public class InitServlet extends HttpServlet{
 
     @Override
@@ -31,18 +35,19 @@ public class InitServlet extends HttpServlet{
 
 기본적으로 HttpServlet클래스를 상속을 받아서 init메소드를 오버라이드 해준다.
 서블릿 3.0부터는 어노테이션으로 매핑을 해줄수 있게 되었다. 
+아래 버전은 밑에 web.xml 파일에 초기화 변수를 설정할 수있다.
 
 ```xml
 	<servlet>
-		<servlet-name>init</servlet-name>
+		<servlet-name>initServlet</servlet-name>
 		<servlet-class>info.thecodinglive.basic</servlet-class>
 		<init-param>
-				<param-name>siteName</param-name>
-				<param-value>jpub</param-value>
+			<param-name>siteName</param-name>
+			<param-value>jpub</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>init</servlet-name>
+		<servlet-name>initServlet</servlet-name>
 		<url-pattern>/init</url-pattern>
 	</servlet-mapping>
 ```
