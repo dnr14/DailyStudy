@@ -16,6 +16,10 @@ JSP는 html안에 Java코드를 넣어놓은 방식이다.<
 Servlet은 생명주기를 가지고 있다. WAS에서 Context가 초기화되면서 생명주기가 시작된다.<br>
 생명주기는 3단계로 <Strong>Initialize, Service, Destory</Strong>로 구성이된다.
 
+
+
+
+
 #1. init
 ```java
 @WebServlet(
