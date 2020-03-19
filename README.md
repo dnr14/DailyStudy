@@ -30,3 +30,4 @@ public class InitServlet extends HttpServlet{
 ```
 
 기본적으로 HttpServlet클래스를 상속을 받아서 init메소드를 오버라이드 해준다.
+서블릿 3.0부터는 어노테이션으로 매핑을 해줄수 있게 되었다. 
